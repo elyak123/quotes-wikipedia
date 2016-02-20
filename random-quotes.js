@@ -34,7 +34,7 @@ $(document).ready(function(){
 					    	var el = $('<div></div>');
 					    	//parseo del html de wikipedia
 					    	el.html(wikiText);
-					    	//expresiones regulares de las rutas de las ligas.
+					    	//expresiones regulares de las rutas de las ligas cuando se ejecuta de forma local.
 					   //  	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
 					   //  		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
 					   //  		insidePage  = /Quotes\/index.html#\S+$/,
@@ -79,7 +79,7 @@ $(document).ready(function(){
 					});
 				}
 				wikiQuote(author.textContent);
-				$("#quote").append(quote);
+				$("#quote").append('"' + quote+'"');
 				$("#author").append(author);
 				$(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=");
 			});		
