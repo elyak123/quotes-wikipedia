@@ -1,6 +1,9 @@
 #wiki-container{
 	padding-top: 1em;
 	display: inline-block;
+
+}
+#wiki-container div table{
 	text-align: center;
 }
 #quote{
