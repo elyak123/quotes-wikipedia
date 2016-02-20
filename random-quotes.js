@@ -79,7 +79,7 @@ $(document).ready(function(){
 					});
 				}
 				wikiQuote(author.textContent);
-				$("#quote").append('"' + quote+'"');
+				$("#quote").append(quote);
 				$("#author").append(author);
 				$(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=");
 			});		
