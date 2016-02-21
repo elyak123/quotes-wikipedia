@@ -57,7 +57,7 @@ $(document).ready(function(){
 								// 	console.log("La liga debe estar bien porque no hubo cambios");
 								// }
 					   //  	}
-					    	console.log(x);
+					   //  	console.log(x);
 					    	//debugger;
 					    	for (var i = 0; i < $('img', el).length; i++) {
 					    		var source    = $('img', el)[i].src;
@@ -70,7 +70,9 @@ $(document).ready(function(){
 					    	}
 					    	//debugger;
 					    	$("#wiki-container").empty();
-					    	$('#wiki-container').append(el);
+					    	debugger;
+					    	$('#wiki-container').append($(".vcard", el));
+					    	$('#wiki-container').append($('p', el)[0]);
 					    }else{
 					    	console.log("No existe el autor");
 					    	$('#wiki-container').append('<h1>Upps!! este autor no se encuentra en wikipedia!!</h1>');
