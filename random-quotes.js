@@ -34,7 +34,7 @@ $(document).ready(function(){
 					    	var el = $('<div></div>');
 					    	//parseo del html de wikipedia
 					    	el.html(wikiText);
-					    	//expresiones regulares de las rutas de las ligas cuando se ejecuta de forma local.
+					    	//expresiones regulares de las rutas de las ligas cuando se ejecuta de forma local
 					   //  	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
 					   //  		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
 					   //  		insidePage  = /Quotes\/index.html#\S+$/,
@@ -70,7 +70,7 @@ $(document).ready(function(){
 					    	}
 					    	//debugger;
 					    	$("#wiki-container").empty();
-					    	debugger;
+					    	//debugger;
 					    	$('#wiki-container').append($(".vcard", el));
 					    	$('#wiki-container').append($('p', el)[0]);
 					    }else{
