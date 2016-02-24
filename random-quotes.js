@@ -35,29 +35,29 @@ $(document).ready(function(){
 					    	//parseo del html de wikipedia
 					    	el.html(wikiText);
 					    	//expresiones regulares de las rutas de las ligas cuando se ejecuta de forma local
-					   //  	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
-					   //  		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
-					   //  		insidePage  = /Quotes\/index.html#\S+$/,
-					   //  		outsidepage = /http:\/\//;
-					   //  		//debugger;
-					   //  	for (var i = 0; i < $('a', el).length; i++) {
-					   //  		var blabla = $('a', el)[i].href;
-					   //  		//debugger;
-					   //  		var wtf = blabla.slice(7);
-								// if (insidePage.test(blabla)) {
-								// 	console.log("Liga interna se deja igual " +blabla)
-								// } else if (outerWiki.test(blabla)) {
-								// 	$('a', el)[i].setAttribute('href', 'http:' + wtf);
-								// 	//debugger;
-								// } else if(innerWiki.test(blabla)){
-								// 	$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
-								// 	//debugger;
-								// 	console.log("la liga corregida es " + $('a', el)[i].href);
-								// }else{
-								// 	console.log("La liga debe estar bien porque no hubo cambios");
-								// }
-					   //  	}
-					   //  	console.log(x);
+					    	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
+					    		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
+					    		insidePage  = /Quotes\/index.html#\S+$/,
+					    		outsidepage = /http:\/\//;
+					    		//debugger;
+					    	for (var i = 0; i < $('a', el).length; i++) {
+					    		var blabla = $('a', el)[i].href;
+					    		//debugger;
+					    		var wtf = blabla.slice(7);
+								if (insidePage.test(blabla)) {
+									console.log("Liga interna se deja igual " +blabla)
+								} else if (outerWiki.test(blabla)) {
+									$('a', el)[i].setAttribute('href', 'http:' + wtf);
+									//debugger;
+								} else if(innerWiki.test(blabla)){
+									$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
+									//debugger;
+									console.log("la liga corregida es " + $('a', el)[i].href);
+								}else{
+									console.log("La liga debe estar bien porque no hubo cambios");
+								}
+					    	}
+					    	console.log(x);
 					    	//debugger;
 					    	for (var i = 0; i < $('img', el).length; i++) {
 					    		var source    = $('img', el)[i].src;

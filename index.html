@@ -15,20 +15,20 @@
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+		  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<div>
-		<h1>"<span id="quote"></span> "
-
-		</h1>
-		<p id="author">
-
-		</p>
-		<button id="disparoQuotes">Nueva</button>
-		<div class="fb-share-button" data-href="http://elyak123.github.io/quotes-wikipedia/" data-layout="button"></div>
-		<button><a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world">Tweet</a></button>
+		<div id="quote-Container">
+			<h1>"<span id="quote"></span>"</h1>
+			<p id="author"></p>
+		</div>
+		<div id="button-Container">
+			<button id="disparoQuotes">Nueva</button>
+			<div class="fb-share-button" data-href="http://elyak123.github.io/quotes-wikipedia/" data-layout="button"></div>
+			<button><a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world">Tweet</a></button>
+		</div>
 		<div id="wiki-container"></div>
 	</div>
 </body>

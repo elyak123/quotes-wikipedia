@@ -1,9 +1,31 @@
 #wiki-container{
-	padding-top: 1em;
 	display: inline-block;
+}
+.vcard{
+	float: right;
+	width: 22em;
+	position: relative;
+	top: -9em;
+}
+#wiki-container p{
+/*	display: block;
+	width: 22em;*/
 
 }
-
+#quote-Container{
+	display: inline-block;
+	width: 75%;
+}
+h1{
+	display: inline-block;
+	text-align: left;
+}
 #quote{
 	font-style: italic;;
+}
+#author{
+	display: block;
+}
+#button-container{
+	display: block;
 }
