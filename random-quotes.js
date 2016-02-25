@@ -54,9 +54,9 @@ $(document).ready(function(){
 									} else if(innerWiki.test(blabla)){
 										$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
 										//debugger;
-										console.log("la liga corregida es " + $('a', el)[i].href);
+										//console.log("la liga corregida es " + $('a', el)[i].href);
 									}else{
-										console.log("La liga debe estar bien porque no hubo cambios");
+										//console.log("La liga debe estar bien porque no hubo cambios");
 									}
 						    	}
 					    	}
@@ -64,16 +64,27 @@ $(document).ready(function(){
 					    		var innerWiki = /^\/\w+\/\w+/;
 					    		var anchors = $("#wiki-container a");
 					    		for (var i = 0; i < anchors.length; i++){
-					    			debugger;
+					    			//debugger;
 					    			var blabla = anchors[i].href;
 					    			var wtf = blabla.slice(25);
 					    			if(innerWiki.test(wtf)) {
-					    				debugger;
+					    				//debugger;
 					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
 					    			}
 					    		}
 					    	}
-					    	//console.log(x);
+					    	console.log(x);
+					    	//debugger;
+					    	testProduccion();
+					    	$("#wiki-container").empty();
+					    	//debugger;
+					    	$('#wiki-container').append($(".vcard", el)[0]);
+					    	if($('p', el).first().text().length > 100){
+					    		$('#wiki-container').append($('p', el)[0]);
+					    	}else{
+					    		$('#wiki-container').append($('p', el)[0]);
+					    		$('#wiki-container').append($('p', el)[1]);
+					    	}
 					    	//debugger;
 					    	for (var i = 0; i < $('#wiki-container img').length; i++) {
 					    		var source    = $('#wiki-container img')[i].src;
@@ -81,21 +92,9 @@ $(document).ready(function(){
 					    		var se = $('#wiki-container img')[i];
 					    		console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
-					    		//console.log(se);
+					    		console.log(se);
 					    		//debugger;
 					    	}
-					    	//debugger;
-					    	$("#wiki-container").empty();
-					    	//debugger;
-					    	$('#wiki-container').append($(".vcard", el)[0]);
-					    	debugger;
-					    	if($('p', el)[0].length > 100){
-					    		$('#wiki-container').append($('p', el)[0]);
-					    	}else{
-					    		$('#wiki-container').append($('p', el)[0]);
-					    		$('#wiki-container').append($('p', el)[1]);
-					    	}
-					    	testProduccion();
 					    }else{
 					    	//console.log("No existe el autor");
 					    	$('#wiki-container').append('<h1>Upps!! este autor no se encuentra en wikipedia!!</h1>');
