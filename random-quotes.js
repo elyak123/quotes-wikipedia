@@ -63,6 +63,7 @@ $(document).ready(function(){
 					    	function testProduccion (){
 					    		var innerWiki = /^\/\w+\/\w+/;
 					    		var anchors = $("#wiki-container a");
+					    		debugger;
 					    		for (var i = 0; i < anchors.length; i++){
 					    			//debugger;
 					    			var blabla = anchors[i].href;
@@ -93,7 +94,6 @@ $(document).ready(function(){
 					    		var se = $('#wiki-container img')[i];
 					    		console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
-					    		se.setAttribute('href', 'http://' + newSource);
 					    		console.log(se);
 					    		//debugger;
 					    	}
