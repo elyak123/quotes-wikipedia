@@ -67,7 +67,7 @@ $(document).ready(function(){
 					    			debugger;
 					    			var blabla = anchors[i].href;
 					    			var wtf = blabla.slice(25);
-					    			if(innerWiki.test(blabla)) {
+					    			if(innerWiki.test(wtf)) {
 					    				debugger;
 					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
 					    			}
