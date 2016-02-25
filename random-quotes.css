@@ -12,6 +12,10 @@ p{
 	display: inline-block;
 
 }
+#disparoQuotes{
+	padding: 3px 12px;
+	vertical-align: top;
+}
 h1{
 	display: inline-block;
 	text-align: left;
