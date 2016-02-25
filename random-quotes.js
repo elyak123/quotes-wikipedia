@@ -87,7 +87,7 @@ $(document).ready(function(){
 					    	//debugger;
 					    	$("#wiki-container").empty();
 					    	//debugger;
-					    	$('#wiki-container').append($(".vcard", el));
+					    	$('#wiki-container').append($(".biography", el));
 					    	$('#wiki-container').append($('p', el)[0]);
 					    	testProduccion();
 					    }else{
