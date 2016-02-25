@@ -80,11 +80,17 @@ $(document).ready(function(){
 					    	$("#wiki-container").empty();
 					    	//debugger;
 					    	$('#wiki-container').append($(".vcard", el)[0]);
+					    	//debugger;
 					    	if($('p', el).first().text().length > 200){
 					    		$('#wiki-container').append($('p', el)[0]);
-					    	}else{
+					    	}else if($('p', el).length > 1){
+					    		//debugger;
 					    		$('#wiki-container').append($('p', el)[0]);
 					    		$('#wiki-container').append($('p', el)[1]);
+					    		//debugger;
+					    	}else{
+					    		//debugger;
+					    		$('#wiki-container').append($(el));
 					    	}
 					    	//debugger;
 					    	testProduccion();
