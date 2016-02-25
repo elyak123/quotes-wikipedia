@@ -67,7 +67,7 @@ $(document).ready(function(){
 					    		for (var i = 0; i < anchors.length; i++){
 					    			if(innerWiki.test(blabla)) {
 					    				debugger;
-					    				$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + anchors[i]);
+					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + anchors[i]);
 					    			}
 					    		}
 					    	}
