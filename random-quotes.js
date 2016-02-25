@@ -63,8 +63,8 @@ $(document).ready(function(){
 					    	function testProduccion (){
 					    		var innerWiki = /^\/\w+\/\w+/;
 					    		var anchors = $("#wiki-container a");
-					    		var blabla = $('a', el)[i].href;
 					    		for (var i = 0; i < anchors.length; i++){
+					    			var blabla = anchors[i].href;
 					    			if(innerWiki.test(blabla)) {
 					    				debugger;
 					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + anchors[i]);
