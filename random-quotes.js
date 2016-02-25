@@ -75,10 +75,10 @@ $(document).ready(function(){
 					    	}
 					    	//console.log(x);
 					    	//debugger;
-					    	for (var i = 0; i < $('img', el).length; i++) {
-					    		var source    = $('img', el)[i].src;
+					    	for (var i = 0; i < $('#wiki-container img').length; i++) {
+					    		var source    = $('#wiki-container img')[i].src;
 					    		var newSource = source.slice(7);
-					    		var se = $('img', el)[i];
+					    		var se = $('#wiki-container img')[i];
 					    		console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
 					    		//console.log(se);
