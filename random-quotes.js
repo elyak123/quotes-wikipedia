@@ -88,6 +88,7 @@ $(document).ready(function(){
 					    	$("#wiki-container").empty();
 					    	//debugger;
 					    	$('#wiki-container').append($(".vcard", el)[0]);
+					    	debugger;
 					    	if($('p', el)[0].length > 100){
 					    		$('#wiki-container').append($('p', el)[0]);
 					    	}else{
