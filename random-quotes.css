@@ -12,6 +12,11 @@ p{
 	display: inline-block;
 
 }
+.fb-share-button{
+	position: relative;
+	bottom: 13px;
+	padding: 0 2px 0 2px;
+}
 #disparoQuotes{
 	padding: 3px 12px;
 	vertical-align: top;
