@@ -5,10 +5,8 @@
 	float: left;
 	width: 22em;
 }
-#wiki-container p{
-/*	display: block;
-	width: 22em;*/
-
+p{
+	font-size: 16px;
 }
 #quote-Container{
 	display: inline-block;
