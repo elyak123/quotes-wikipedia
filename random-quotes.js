@@ -73,7 +73,7 @@ $(document).ready(function(){
 					    			}
 					    		}
 					    	}
-					    	console.log(x);
+					    	//console.log(x);
 					    	//debugger;
 					    	for (var i = 0; i < $('#wiki-container img').length; i++) {
 					    		var source    = $('#wiki-container img')[i].src;
@@ -87,8 +87,13 @@ $(document).ready(function(){
 					    	//debugger;
 					    	$("#wiki-container").empty();
 					    	//debugger;
-					    	$('#wiki-container').append($(".biography", el));
-					    	$('#wiki-container').append($('p', el)[0]);
+					    	$('#wiki-container').append($(".vcard", el)[0]);
+					    	if($('p', el)[0].length > 100){
+					    		$('#wiki-container').append($('p', el)[0]);
+					    	}else{
+					    		$('#wiki-container').append($('p', el)[0]);
+					    		$('#wiki-container').append($('p', el)[1]);
+					    	}
 					    	testProduccion();
 					    }else{
 					    	//console.log("No existe el autor");
