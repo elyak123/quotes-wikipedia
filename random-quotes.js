@@ -64,6 +64,7 @@ $(document).ready(function(){
 					    		var innerWiki = /^\/\w+\/\w+/;
 					    		var anchors = $("#wiki-container a");
 					    		for (var i = 0; i < anchors.length; i++){
+					    			debugger;
 					    			var blabla = anchors[i].href;
 					    			if(innerWiki.test(blabla)) {
 					    				debugger;
