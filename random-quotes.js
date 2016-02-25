@@ -66,9 +66,10 @@ $(document).ready(function(){
 					    		for (var i = 0; i < anchors.length; i++){
 					    			debugger;
 					    			var blabla = anchors[i].href;
+					    			var wtf = blabla.slice(25);
 					    			if(innerWiki.test(blabla)) {
 					    				debugger;
-					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + anchors[i]);
+					    				anchors[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
 					    			}
 					    		}
 					    	}
