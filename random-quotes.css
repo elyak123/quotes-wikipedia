@@ -2,10 +2,8 @@
 	display: inline-block;
 }
 .vcard{
-	float: right;
+	float: left;
 	width: 22em;
-	position: relative;
-	top: -9em;
 }
 #wiki-container p{
 /*	display: block;
@@ -14,7 +12,7 @@
 }
 #quote-Container{
 	display: inline-block;
-	width: 75%;
+
 }
 h1{
 	display: inline-block;
