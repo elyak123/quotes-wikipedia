@@ -52,9 +52,9 @@ $(document).ready(function(){
 								} else if(innerWiki.test(blabla)){
 									$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
 									//debugger;
-									//console.log("la liga corregida es " + $('a', el)[i].href);
+									console.log("la liga corregida es " + $('a', el)[i].href);
 								}else{
-									//console.log("La liga debe estar bien porque no hubo cambios");
+									console.log("La liga debe estar bien porque no hubo cambios");
 								}
 					    	}
 					    	console.log(x);
