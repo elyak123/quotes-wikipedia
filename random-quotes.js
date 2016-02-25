@@ -26,7 +26,7 @@ $(document).ready(function(){
 					  },
 					  dataType: 'jsonp',
 					  success: function (x) {
-					    console.log(x);
+					    //console.log(x);
 					    if(x.parse !== undefined){
 					    	$('#wiki-container').append('<h1>Cargando contenido de wikipedia, favor de esperar.</h1>');
 					    	//debugger;
@@ -35,29 +35,29 @@ $(document).ready(function(){
 					    	//parseo del html de wikipedia
 					    	el.html(wikiText);
 					    	//expresiones regulares de las rutas de las ligas cuando se ejecuta de forma local
-					    	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
-					    		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
-					    		insidePage  = /Quotes\/index.html#\S+$/,
-					    		outsidepage = /http:\/\//;
-					    		//debugger;
-					    	for (var i = 0; i < $('a', el).length; i++) {
-					    		var blabla = $('a', el)[i].href;
-					    		//debugger;
-					    		var wtf = blabla.slice(7);
-								if (insidePage.test(blabla)) {
-									console.log("Liga interna se deja igual " +blabla)
-								} else if (outerWiki.test(blabla)) {
-									$('a', el)[i].setAttribute('href', 'http:' + wtf);
-									//debugger;
-								} else if(innerWiki.test(blabla)){
-									$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
-									//debugger;
-									console.log("la liga corregida es " + $('a', el)[i].href);
-								}else{
-									console.log("La liga debe estar bien porque no hubo cambios");
-								}
-					    	}
-					    	console.log(x);
+					   //  	var outerWiki   = /^[file:]+\/{3}\w+\.\w+/,
+					   //  		innerWiki   = /^[file:]+\/{3}\w+\/\w+/,
+					   //  		insidePage  = /Quotes\/index.html#\S+$/,
+					   //  		outsidepage = /http:\/\//;
+					   //  		//debugger;
+					   //  	for (var i = 0; i < $('a', el).length; i++) {
+					   //  		var blabla = $('a', el)[i].href;
+					   //  		//debugger;
+					   //  		var wtf = blabla.slice(7);
+								// if (insidePage.test(blabla)) {
+								// 	console.log("Liga interna se deja igual " +blabla)
+								// } else if (outerWiki.test(blabla)) {
+								// 	$('a', el)[i].setAttribute('href', 'http:' + wtf);
+								// 	//debugger;
+								// } else if(innerWiki.test(blabla)){
+								// 	$('a', el)[i].setAttribute('href', 'http://en.wikipedia.org' + wtf);
+								// 	//debugger;
+								// 	console.log("la liga corregida es " + $('a', el)[i].href);
+								// }else{
+								// 	console.log("La liga debe estar bien porque no hubo cambios");
+								// }
+					   //  	}
+					   //  	console.log(x);
 					    	//debugger;
 					    	for (var i = 0; i < $('img', el).length; i++) {
 					    		var source    = $('img', el)[i].src;
@@ -65,7 +65,7 @@ $(document).ready(function(){
 					    		var se = $('img', el)[i];
 					    		console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
-					    		console.log(se);
+					    		//console.log(se);
 					    		//debugger;
 					    	}
 					    	//debugger;
@@ -74,7 +74,7 @@ $(document).ready(function(){
 					    	$('#wiki-container').append($(".vcard", el));
 					    	$('#wiki-container').append($('p', el)[0]);
 					    }else{
-					    	console.log("No existe el autor");
+					    	//console.log("No existe el autor");
 					    	$('#wiki-container').append('<h1>Upps!! este autor no se encuentra en wikipedia!!</h1>');
 					    }
 					  }
