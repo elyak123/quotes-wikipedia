@@ -73,7 +73,7 @@ $(document).ready(function(){
 					    			}
 					    		}
 					    	}
-					    	//console.log(x);
+					    	console.log(x);
 					    	//debugger;
 					    	for (var i = 0; i < $('#wiki-container img').length; i++) {
 					    		var source    = $('#wiki-container img')[i].src;
