@@ -80,7 +80,7 @@ $(document).ready(function(){
 					    	$("#wiki-container").empty();
 					    	//debugger;
 					    	$('#wiki-container').append($(".vcard", el)[0]);
-					    	if($('p', el).first().text().length > 100){
+					    	if($('p', el).first().text().length > 200){
 					    		$('#wiki-container').append($('p', el)[0]);
 					    	}else{
 					    		$('#wiki-container').append($('p', el)[0]);
