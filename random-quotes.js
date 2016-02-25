@@ -75,7 +75,7 @@ $(document).ready(function(){
 					    	}
 					    	console.log(x);
 					    	//debugger;
-					    	testProduccion();
+					    	//testLocal();
 					    	$("#wiki-container").empty();
 					    	//debugger;
 					    	$('#wiki-container').append($(".vcard", el)[0]);
@@ -86,12 +86,14 @@ $(document).ready(function(){
 					    		$('#wiki-container').append($('p', el)[1]);
 					    	}
 					    	//debugger;
+					    	testProduccion();
 					    	for (var i = 0; i < $('#wiki-container img').length; i++) {
 					    		var source    = $('#wiki-container img')[i].src;
 					    		var newSource = source.slice(7);
 					    		var se = $('#wiki-container img')[i];
 					    		console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
+					    		se.setAttribute('href', 'http://' + newSource);
 					    		console.log(se);
 					    		//debugger;
 					    	}
