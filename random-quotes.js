@@ -9,7 +9,9 @@ $(document).ready(function(){
 				$("#wiki-container").empty();
 			} else{console.log("Vacios, se procede.")};
 			$.get("http://www.stands4.com/services/v2/quotes.php?uid=" + uid + "&tokenid=" + tokenid + "&searchtype=RANDOM", function(data){
-				$('#quote').append('<h2>En este momento la API esta en mantenimiento... lo siento mucho.</h2>');
+				if(data.getElementsByTagName("error")){
+					$('#quote').append('<h2>En este momento la API esta en mantenimiento... lo siento mucho.</h2>');
+				}
 				console.log(data);
 				var xmlQuote  = data.getElementsByTagName("quote"),
 					quote 	  = xmlQuote[0].childNodes[0],
