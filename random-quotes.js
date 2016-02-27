@@ -8,16 +8,28 @@ $(document).ready(function(){
 				$("#author").empty();
 				$("#wiki-container").empty();
 			} else{console.log("Vacios, se procede.")};
+			//peticion en mashape.com
+			// $.ajax({
+			// 	url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
+			// 	type: 'POST',
+			// 	success: function(data){
+			// 		console.log("SUCCESS!!!!");
+			// 		console.log(data);
+			// 	},
+			// 	error: function(err){
+
+			// 	},
+			// 	beforeSend: function(xhr){
+			// 		xhr.setRequestHeader("X-Mashape-Authorization", "LzfVLBqwPrmshrgyOKbH0Cbw78tDp1PJDKfjsnJQV43gekLz6K");
+			// 	}
+			// });
 			$.get("http://www.stands4.com/services/v2/quotes.php?uid=" + uid + "&tokenid=" + tokenid + "&searchtype=RANDOM", function(data){
-				if(data.getElementsByTagName("error")){
-					$('#quote').append('<h2>En este momento la API esta en mantenimiento... lo siento mucho.</h2>');
-				}
-				console.log(data);
+				//console.log(data);
 				var xmlQuote  = data.getElementsByTagName("quote"),
 					quote 	  = xmlQuote[0].childNodes[0],
 					xmlAuthor = data.getElementsByTagName("author"),
 					author    = xmlAuthor[0].childNodes[0];
-				function wikiQuote (titles){
+			 	function wikiQuote (titles){
 					var API_URL = "https://en.wikipedia.org/w/api.php";
 					$.ajax({
 					  url: API_URL,
@@ -78,7 +90,7 @@ $(document).ready(function(){
 					    			}
 					    		}
 					    	}
-					    	console.log(x);
+					    	//console.log(x);
 					    	//debugger;
 					    	//testLocal();
 					    	$("#wiki-container").empty();
@@ -102,9 +114,9 @@ $(document).ready(function(){
 					    		var source    = $('#wiki-container img')[i].src;
 					    		var newSource = source.slice(7);
 					    		var se = $('#wiki-container img')[i];
-					    		console.log(newSource);
+					    		//console.log(newSource);
 					    		se.setAttribute('src', 'http://' + newSource);
-					    		console.log(se);
+					    		//console.log(se);
 					    		//debugger;
 					    	}
 					    }else{
